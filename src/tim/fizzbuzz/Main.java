@@ -11,7 +11,15 @@ public class Main {
                 toPrint += "Fizz";
 
             // divisible by 5?
+            if (i % 5 == 0)
+                toPrint += "Buzz";
 
+            // neither?
+            if (toPrint.equals(""))
+                toPrint = String.valueOf(i);
+
+            // then print
+            System.out.println(toPrint);
         }
     }
 }
