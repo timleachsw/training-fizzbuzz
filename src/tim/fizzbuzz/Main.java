@@ -2,11 +2,15 @@ package tim.fizzbuzz;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int max = 300;
+        // get maximum number from user
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Maximum number to FizzBuzz up to?");
+        int max = scanner.nextInt();
 
         for (int i = 1; i <= max; i++) {
             LinkedList<String> toPrint = new LinkedList<>();
