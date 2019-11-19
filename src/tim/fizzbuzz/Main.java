@@ -22,6 +22,16 @@ public class Main {
             if (i % 11 == 0)
                 toPrint = "Bong";  // overwrite
 
+            // divisible by 13?
+            if (i % 13 == 0) {
+                // if contains a "B", put before that
+                if (toPrint.matches("B"))
+                    toPrint = toPrint.replaceFirst("B", "FezzB");
+                // if not, put at end
+                else
+                    toPrint = toPrint.replaceFirst("$", "Fezz");  // will fill empty string too
+            }
+
             // neither?
             if (toPrint.equals(""))
                 toPrint = String.valueOf(i);
